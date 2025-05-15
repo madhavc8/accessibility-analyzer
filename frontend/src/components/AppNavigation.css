@@ -1,0 +1,37 @@
+/* App Navigation Styling */
+.app-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: var(--nav-inactive-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--nav-inactive-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button.active {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button.active:hover {
+  background-color: var(--accent-hover);
+}
