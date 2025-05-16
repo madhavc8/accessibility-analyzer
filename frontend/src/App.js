@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// Dummy comment to trigger workflow
 import { Chart, registerables } from 'chart.js';
 import { auth } from './firebase';
 import './App.css';
