@@ -4,19 +4,6 @@ import './LoadingAnimation.css';
 const LoadingAnimation = () => {
   const [progress, setProgress] = useState(0);
   const [loadingText, setLoadingText] = useState('Scanning website...');
-  
-  // Array of loading messages to cycle through
-  const loadingMessages = [
-    'Scanning website...',
-    'Checking accessibility standards...',
-    'Analyzing HTML structure...',
-    'Evaluating color contrast...',
-    'Examining keyboard navigation...',
-    'Inspecting ARIA attributes...',
-    'Checking image alt texts...',
-    'Validating form controls...',
-    'Almost there...'
-  ];
 
   // Update progress bar
   useEffect(() => {
@@ -34,6 +21,19 @@ const LoadingAnimation = () => {
 
   // Cycle through loading messages
   useEffect(() => {
+    // Array of loading messages to cycle through
+    const loadingMessages = [
+      'Scanning website...',
+      'Checking accessibility standards...',
+      'Analyzing HTML structure...',
+      'Evaluating color contrast...',
+      'Examining keyboard navigation...',
+      'Inspecting ARIA attributes...',
+      'Checking image alt texts...',
+      'Validating form controls...',
+      'Almost there...'
+    ];
+    
     const messageInterval = setInterval(() => {
       setLoadingText(prevText => {
         const currentIndex = loadingMessages.indexOf(prevText);
@@ -43,7 +43,7 @@ const LoadingAnimation = () => {
     }, 2000); // Change message every 2 seconds
 
     return () => clearInterval(messageInterval);
-  }, [loadingMessages]);
+  }, []);
 
   return (
     <div className="loading-container">
