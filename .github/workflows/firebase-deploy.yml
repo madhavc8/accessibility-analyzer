@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: cd frontend && npm run build
         env:
-          REACT_APP_API_URL: https://accessibility-analyzer-backend.vercel.app
+          REACT_APP_API_URL: https://accessibility-analyzer-seven.vercel.app
           CI: false
       
       - name: Deploy to Firebase
