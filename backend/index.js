@@ -7,11 +7,7 @@ const PORT = process.env.PORT || 5000;
 
 // Configure CORS to accept requests from both development and production environments
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://accessibility-analyser.web.app',
-    'https://accessibility-analyser.firebaseapp.com'
-  ],
+  origin: '*', // Allow all origins temporarily for debugging
   methods: ['GET', 'POST'],
   credentials: true
 }));
