@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - trigger-deploy
     paths:
       - 'frontend/**'
 
