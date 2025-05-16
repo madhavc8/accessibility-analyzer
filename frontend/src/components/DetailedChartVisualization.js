@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bar, Pie, Doughnut } from 'react-chartjs-2';
+import { Bar, Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import './DetailedChartVisualization.css';
 

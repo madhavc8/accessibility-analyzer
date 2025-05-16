@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Chart, registerables } from 'chart.js';
-import jsPDF from 'jspdf';
-import Papa from 'papaparse';
+import { auth } from './firebase';
 import './App.css';
 import './components/AppContainer.css';
 import './components/AppNavigation.css';
-import { auth } from './firebase';
 
 // Import components
 import ProfileButton from './components/ProfileButton';
@@ -13,7 +11,7 @@ import AnalysisForm from './components/AnalysisForm';
 import Results from './components/Results';
 import UserDashboard from './components/UserDashboard';
 import ComparativeAnalysis from './components/ComparativeAnalysis';
-import DetailedChartVisualization from './components/DetailedChartVisualization';
+// DetailedChartVisualization is used in Results.js, not directly in App.js
 
 Chart.register(...registerables); // Register Chart.js components
 
@@ -29,6 +27,7 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         setIsLoggedIn(true);
+        // Store email but not using it directly in this component
         setUserEmail(user.email);
       } else {
         setIsLoggedIn(false);
