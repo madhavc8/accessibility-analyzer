@@ -1,8 +1,6 @@
 # Accessibility Analyzer Frontend
 
-This is the frontend application for the Accessibility Analyzer, a tool that helps identify and fix accessibility issues on websites.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the Accessibility Analyzer application, built with React and Firebase. The application helps users identify and fix accessibility issues on websites.
 
 ## Available Scripts
 
