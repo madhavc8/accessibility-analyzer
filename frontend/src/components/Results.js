@@ -50,6 +50,7 @@ const Results = ({ result }) => {
 
   if (!result) return null;
 
+  // Return the component UI
   return (
     <div className="results-container">
       <div className="results-header">
