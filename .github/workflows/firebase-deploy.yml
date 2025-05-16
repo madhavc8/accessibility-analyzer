@@ -28,6 +28,7 @@ jobs:
         run: cd frontend && npm run build
         env:
           REACT_APP_API_URL: https://accessibility-analyzer-backend.onrender.com
+          CI: false
       
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
