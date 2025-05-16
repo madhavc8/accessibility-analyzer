@@ -17,6 +17,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Root route handler
+app.get('/', (req, res) => {
+  res.json({ message: 'Accessibility Analyzer API is running' });
+});
+
 app.post('/analyze', async (req, res) => {
   const { url } = req.body;
 
