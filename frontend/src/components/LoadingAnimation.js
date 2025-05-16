@@ -43,7 +43,7 @@ const LoadingAnimation = () => {
     }, 2000); // Change message every 2 seconds
 
     return () => clearInterval(messageInterval);
-  }, []);
+  }, [loadingMessages]);
 
   return (
     <div className="loading-container">
